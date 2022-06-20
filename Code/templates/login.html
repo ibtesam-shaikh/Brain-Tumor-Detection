@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="static/css/idstyle.css">
+
+	</head>
+	<body>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BA0021;text-align: center;">
+            <div class="container-fluid"
+              style="margin-top: 12px;height:20px;align-items: center;font-size: larger;font-weight: bold;padding: 20px;">
+              <a class="navbar-brand"
+                style="color: white;padding-bottom: 40px;padding-right: 20px; font-style: italic; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;margin-top:10px">ABC</a>
+              <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page"
+                        style="margin-top:10px;color: white;padding-bottom: 40px;padding-right: 20px;padding-left: 20px; font-style: italic; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"
+                        href="{{url_for('index')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"
+                        style="margin-top:10px;color: white;padding-right: 20px;padding-left: 20px; font-style: italic; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"" href="
+                        #">Help</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"
+                        style="margin-top:10px;color: white; font-style: italic; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"
+                        href="{{url_for('last')}}">Mypage</a>
+                    </li>
+                    <li class="nav-item" style="padding-left: 870px;">
+                           <a class="nav-link"
+                        style="margin-top:10px;color: white; font-style: italic; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"
+                        href="{{url_for('login')}}">Login</a>
+                    </li>
+                    <li class="nav-item" style="padding-left:20px">
+                      <a class="nav-link"
+                   style="margin-top:10px;color: white; font-style: italic; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"
+                   href="{{url_for('signup')}}">Sign Up</a>
+               </li>
+        
+                  </ul>
+                </div>
+            </div>
+          </nav>
+            
+          <form method="POST" action="/login_validation">
+            <section class="ftco-section">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Login Here!</h2>
+                  </div>
+                </div>
+              
+              <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-10">
+                  <div class="wrap d-md-flex">
+                    <div class="img" style="background-image: url(static/images/3.jpg);">
+                    </div>
+                    
+                    <div class="login-wrap p-4 p-md-5">
+                      <div class="d-flex">
+                        <div class="w-100">
+                          <h3 class="mb-4" style="color:#BA0021">Sign In</h3>
+                        </div>
+                      </div>
+            
+                      <div class="form-group mb-3">
+                        <label class="label" for="name" style="color:#BA0021">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username" required>
+                      </div>
+
+                      <div class="form-group mb-3">
+                        <label class="label" for="password" style="color:#BA0021">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Password" required>
+                      </div>
+                            
+                      <div class="form-group">
+                        <a href="/symptoms">
+                          <button type="submit" class="form-control btn  rounded submit px-3" style="background-color: #BA0021;color:white">Sign In</button>
+                        </a>
+                      </div>
+                            
+                      <div class="form-group d-md-flex">
+                        <div class="w-50 text-left">
+                          <label class="checkbox-wrap  mb-0" style="color:#BA0021">Remember Me
+                          <input type="checkbox"  checked>
+                          <span class="checkmark" ></span>
+                          </label>
+                      </div>
+                                            
+                      <div class="w-50 text-md-right" style="color:#BA0021">
+                        <a href="#" style="color:#BA0021">Forgot Password</a>
+                      </div>
+                    
+                    </div>
+                          
+                  </div>
+                  
+                  <p class="text-center">Not a member? <a  href="/signup" style="color:#BA0021">Sign Up</a></p>
+                        
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+
+        
+            <script src="static/js/jquery.min.js"></script>
+          <script src="static/js/popper.js"></script>
+          <script src="static/js/bootstrap.min.js"></script>
+          <script src="static/js/main.js"></script>
+        
+            </body>
+        </html>
